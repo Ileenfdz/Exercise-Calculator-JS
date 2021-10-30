@@ -1,4 +1,4 @@
-import { sum } from "../components/Example";
+import { sum } from "../src/components/Example";
 
 describe('Just an example test', () => {
     test('1 + 1 should be 2', () => {

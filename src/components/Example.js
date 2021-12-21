@@ -1,5 +1,4 @@
-export function sum(a, b)
-{
-    let result = a + b;
-    return result;
+export function sum(){
+    let resultSum = firstNumSum + secondNumSum;
+    console.log(resultSum);
 }

@@ -1,27 +1,47 @@
-// let firstNumSum = parseInt(document.getElementById('firstInputSum').value);
-// let secondNumSum = parseInt(document.getElementById('secondInputSum').value);
+const firstSumInput = (document.getElementById('firstInputSum'));
+const secondSumInput = (document.getElementById('secondInputSum'));
+firstSumInput.placeholder = 'Inserta un número';
+secondSumInput.placeholder = 'Inserta otro número';
 
-// let firstNumMul = parseInt(document.getElementById('firstInputMul').value);
-// let secondNumMul = parseInt(document.getElementById('secondInputMul').value);
+const firstMultiplyInput = (document.getElementById('firstInputMul'));
+const secondMultiplyInput = (document.getElementById('secondInputMul'));
+firstMultiplyInput.placeholder = 'Inserta un número';
+secondMultiplyInput.placeholder = 'Inserta otro número';
 
-// let firstNumDiv = parseInt(document.getElementById('firstInputDiv').value);
-// let secondNumDiv = parseInt(document.getElementById('secondInputDiv').value);
+const firstSubtractInput = (document.getElementById('firstInputSub'));
+const secondSubtractInput = (document.getElementById('secondInputSub'));
+firstSubtractInput.placeholder = 'Inserta un número';
+secondSubtractInput.placeholder = 'Inserta otro número';
 
-// export function sum(){
-//     let resultSum = firstNumSum + secondNumSum;
-//     console.log(resultSum);
-// }
+export function sum(){
+    let firstNumSum = parseInt(firstSumInput.value);
+    let secondNumSum = parseInt(secondSumInput.value);
+    console.log(firstNumSum + secondNumSum);
 
-// export function multiply(){
-//     let resultMul = firstNumMul * secondNumMul;
-//     console.log(resultMul);
-// }
+    firstSumInput.value = '';
+    secondSumInput.value = '';
+}
 
-// export function divide(){
-//     let resultDiv = firstNumDiv / secondNumDiv;
-//     console.log(resultDiv);
-// }
+export function subtract(){
+    let firstNumSubtract = parseInt(firstSubtractInput.value);
+    let secondNumSubtract = parseInt(secondSubtractInput.value);
+    console.log(firstNumSubtract - secondNumSubtract);
+    firstSubtractInput.value = '';
+    secondSubtractInput.value = '';
+    return result = firstNumSubtract - secondNumSubtract;
+}
 
-// document.getElementById('btnSum').addEventListener('click',sum);
-// document.getElementById('btnMul').addEventListener('click',multiply);
-// document.getElementById('btnDiv').addEventListener('click',divide);
+export function multiply(){
+    let firstNumMultiply = parseInt(firstMultiplyInput.value);
+    let secondNumMultiply= parseInt(secondMultiplyInput.value);
+    console.log(firstNumMultiply * secondNumMultiply);
+
+    firstMultiplyInput.value = '';
+    secondMultiplyInput.value = '';
+}
+
+export function start(){
+    document.getElementById('btnSum').addEventListener('click',sum);
+    document.getElementById('btnSub').addEventListener('click',subtract);
+    document.getElementById('btnMul').addEventListener('click',multiply);
+}

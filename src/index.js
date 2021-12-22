@@ -1,8 +1,8 @@
-import {sum} from "../src/components/Example";
+import { start } from "./components/Calculator";
 
 function app()
 {
-    document.getElementById('btnSum').addEventListener('click',sum);
+    start();
 }
 
 app();
